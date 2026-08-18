@@ -1,0 +1,307 @@
+/* --- PALETA DE CORES CYBER-INDUSTRIAL --- */
+:root {
+    --bg-principal: #0a0a0c;        /* Preto asfalto profundo */
+    --bg-card: rgba(22, 22, 26, 0.7);/* Vidro fumê industrial */
+    --borda-metal: #2d2f36;         /* Cinza aço para divisórias */
+    --neon-laranja: #f90404;        /* Laranja fogo / Linha de montagem */
+    --neon-laranja-glow: rgba(255, 85, 0, 0.25);
+    --texto-branco: #ffffff;        /* Leitura limpa */
+    --texto-cinza: #949aa6;         /* Texto secundário */
+}
+
+/* --- RESET & FONTES METÁLICAS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-principal);
+    background-image: 
+        linear-gradient(rgba(255, 85, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 85, 0, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px; /* Textura discreta de grade mecânica ao fundo */
+    color: var(--texto-branco);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+/* Estrutura flexível principal */
+.dinamico-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- CAIXAS DE IMAGEM EDITÁVEIS (DESIGN AVANÇADO) --- */
+.caixa-imagem-editavel {
+    background: radial-gradient(circle, #1a1b20 0%, #111215 100%);
+    border: 2px solid var(--borda-metal);
+    border-left: 4px solid var(--neon-laranja); /* Detalhe lateral de oficina */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    color: var(--texto-cinza);
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+    transition: all 0.3s ease;
+}
+
+.caixa-imagem-editavel:hover {
+    border-color: var(--neon-laranja);
+    box-shadow: 0 0 15px var(--neon-laranja-glow);
+}
+
+.caixa-imagem-editavel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* Caixas de texto dinâmicas */
+.caixa-texto-editavel {
+    height: auto;
+    width: 100%;
+}
+
+/* --- CABEÇALHO PREMIUM --- */
+header {
+    background-color: rgba(10, 10, 12, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--borda-metal);
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: var(--texto-white);
+}
+
+.logo span {
+    color: var(--neon-laranja);
+    text-shadow: 0 0 10px var(--neon-laranja-glow);
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-links a {
+    color: var(--texto-branco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.menu-links a:hover {
+    color: var(--neon-laranja);
+}
+
+/* --- BOTÕES ESTILO OFICINA DE CORRIDA --- */
+.btn-contato {
+    background: linear-gradient(135deg, #ff0000 0%, #cc4400 100%);
+    color: var(--texto-branco);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    border-radius: 0px; /* Bordas retas industriais */
+    border-right: 4px solid #993300;
+    border-bottom: 4px solid #993300;
+    transition: all 0.2s ease;
+}
+
+.btn-contato:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 85, 0, 0.4);
+    filter: brightness(1.1);
+}
+
+.btn-secundario {
+    border: 2px solid var(--borda-metal);
+    color: var(--texto-branco);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-secundario:hover {
+    border-color: var(--neon-laranja);
+    background-color: rgba(255, 85, 0, 0.05);
+}
+
+/* --- SEÇÃO HERO --- */
+.hero {
+    padding: 80px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+@media (max-width: 968px) {
+    .hero { grid-template-columns: 1fr; padding: 40px 5%; gap: 30px; }
+}
+
+.badge-alerta {
+    display: inline-block;
+    background-color: rgba(255, 85, 0, 0.1);
+    border: 1px solid var(--neon-laranja);
+    color: var(--neon-laranja);
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.hero-titulo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-titulo span {
+    color: var(--neon-laranja);
+    text-shadow: 0 0 20px rgba(255, 85, 0, 0.3);
+}
+
+.hero-subtitulo {
+    color: var(--texto-cinza);
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.container-foto-hero {
+    min-height: 450px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%); /* Detalhe de corte mecânico na ponta */
+}
+
+/* --- SEÇÃO SOLUÇÕES (GRID REFORÇADO) --- */
+.secao {
+    padding: 100px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.secao-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.secao-titulo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.secao-header p {
+    color: var(--neon-laranja);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* Cards Estilo "Glow de Metal" */
+.card {
+    background: var(--bg-card);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--borda-metal);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: auto;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 85, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.container-foto-card {
+    min-height: 220px;
+}
+
+.card-conteudo h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--texto-branco);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--borda-metal);
+    padding-bottom: 8px;
+}
+
+.card-conteudo p {
+    color: var(--texto-cinza);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* --- RODAPÉ BRUTALISTA --- */
+footer {
+    background-color: #050506;
+    border-top: 2px solid var(--borda-metal);
+    padding: 30px 5%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.rodape-conteudo p {
+    color: var(--texto-cinza);
+    font-size: 1rem;
+}
