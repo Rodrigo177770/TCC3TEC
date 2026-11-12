@@ -157,11 +157,13 @@ header {
     font-weight: 800;
     font-size: 0.9rem;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .btn-secundario:hover {
     border-color: var(--neon-laranja);
     background-color: rgba(255, 85, 0, 0.05);
+    cursor: pointer;
 }
 
 

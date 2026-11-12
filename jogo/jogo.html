@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória - Vermelho e Preto</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+
+    <header>
+        <h1>Jogo da Memória</h1>
+        <div class="painel-info">
+            <span>Tempo restante: <strong id="tempo">01:00</strong></span>
+            <button id="btn-reiniciar">Reiniciar Jogo</button>
+        </div>
+    </header>
+
+    <main class="tabuleiro" id="tabuleiro">
+        <!-- As cartas serão geradas automaticamente pelo JavaScript -->
+    </main>
+
+
+    <div class="modal oculto" id="modal-fim">
+        <div class="modal-conteudo">
+            <h2 id="mensagem-titulo"></h2>
+            <p id="mensagem-texto"></p>
+            <button id="btn-jogar-novamente">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="jogo.js"></script>
+</body>
+</html>
