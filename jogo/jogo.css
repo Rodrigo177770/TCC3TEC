@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #0d0d0d; /* Preto profundo */
+    background-color: #0d0d0d; 
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ header {
 }
 
 header h1 {
-    color: #e60000; /* Vermelho vibrante */
+    color: #e60000; 
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
@@ -58,7 +58,7 @@ button:hover {
     background-color: #b30000;
 }
 
-/* Grade do Tabuleiro (4 colunas x 4 linhas = 16 cartas / 8 pares) */
+
 .tabuleiro {
     display: grid;
     grid-template-columns: repeat(4, 110px);
@@ -66,7 +66,7 @@ button:hover {
     perspective: 1000px;
 }
 
-/* Estilo da Carta */
+
 .carta {
     width: 110px;
     height: 110px;
@@ -92,7 +92,7 @@ button:hover {
     border: 2px solid #e60000;
 }
 
-/* Costas da carta (antes de clicar) */
+
 .verso {
     background: linear-gradient(135deg, #1f1f1f 25%, #000000 100%);
 }
@@ -104,7 +104,7 @@ button:hover {
     color: #e60000;
 }
 
-/* Frente da carta (onde fica seu PNG) */
+
 .frente {
     background-color: #1a1a1a;
     transform: rotateY(180deg);
@@ -117,7 +117,7 @@ button:hover {
     object-fit: contain;
 }
 
-/* Modal de Fim de Jogo */
+
 .modal {
     position: fixed;
     top: 0;
@@ -158,7 +158,7 @@ button:hover {
     color: #dddddd;
 }
 
-/* Responsividade para celulares */
+
 @media (max-width: 520px) {
     .tabuleiro {
         grid-template-columns: repeat(4, 75px);
@@ -168,4 +168,23 @@ button:hover {
         width: 75px;
         height: 75px;
     }
+}
+
+.btn-secundario {
+    background-color: red;
+    border: 2px solid var(--borda-metal);
+    color: var(--texto-branco);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-secundario:hover {
+    border-color: var(--neon-laranja);
+    background-color: rgba(255, 85, 0, 0.05);
+    cursor: pointer;
 }
